@@ -1,0 +1,1 @@
+Enter n strings. Find the shortest string. Print the string and its length.
