@@ -20,4 +20,16 @@ public interface Determinant {
         return stringArray.get(indexShortestString);
     }
 
+    static String determineLongestString(Array<String> stringArray) {
+        int longestLength = Byte.MIN_VALUE, indexLongestString = 0;
+        for (int i = 0; i < stringArray.getLength(); i++) {
+            int tmpStringLength = stringArray.get(i).length();
+            if (tmpStringLength > longestLength) {
+                longestLength = tmpStringLength;
+                indexLongestString = i;
+            }
+        }
+        return stringArray.get(indexLongestString);
+    }
+
 }
