@@ -2,7 +2,7 @@ package com.lugowoy.tasks.printLongestString;
 
 import com.lugowoy.helper.factory.FactoryArray;
 import com.lugowoy.helper.factory.creator.CreatorArrayUnknown;
-import com.lugowoy.helper.filling.array.strings.FillingArrayRandomLengthStrings;
+import com.lugowoy.helper.filling.array.strings.FillingArrayRandomValueStrings;
 import com.lugowoy.helper.io.reading.ReadingConsole;
 import com.lugowoy.helper.models.arrays.Array;
 import com.lugowoy.helper.other.ArrayLength;
@@ -20,8 +20,7 @@ public class Main {
         int lengthArray = ArrayLength.getLengthArray(new ReadingConsole());
 
         Array<String> stringArray = FactoryArray.getFactoryArray(new CreatorArrayUnknown<String>()).create(
-                                                                     new FillingArrayRandomLengthStrings("english").fill(lengthArray,
-                                                                                                                                 LENGTH_STRING));
+                                                                     new FillingArrayRandomValueStrings("english").fill(lengthArray, LENGTH_STRING));
 
         System.out.println("Strings in an array : " + stringArray);
 
