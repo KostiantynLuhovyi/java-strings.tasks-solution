@@ -27,3 +27,5 @@ If you have any questions about this repository or the solution of the tasks in 
     * _Enter n strings. Find the longest string. Print the string and its length._
 * printShortestString
     * _Enter n strings. Find the shortest string. Print the string and its length._
+* printStringsInAscendingOrderOfLength  
+    * _Sort and print the strings in ascending order of their lengths._  
