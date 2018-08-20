@@ -31,3 +31,5 @@ If you have any questions about this repository or the solution of the tasks in 
     * _Sort and print the strings in ascending order of their lengths._  
 * printStringsInDescendingOrderOfLength  
     * _Sort and print the strings in descending order of their lengths._  
+* printStringsWhoseLengthIsGreaterThanAverage  
+    * _Print strings whose length is greater than the average of the arithmetic length._      
