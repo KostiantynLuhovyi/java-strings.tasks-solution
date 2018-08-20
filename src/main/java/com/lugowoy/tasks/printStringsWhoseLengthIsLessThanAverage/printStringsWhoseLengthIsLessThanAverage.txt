@@ -1,0 +1,1 @@
+Print strings whose length is less than the average of the arithmetic length.
