@@ -23,6 +23,9 @@ If you have any questions about this repository or the solution of the tasks in 
 
 **The package name and description of the solved task that are contained in the root package com.lugowoy.tasks :**  
 
+* determineStringInWhichNumberOfDifferentSymbolsIsMinimum  
+    * _Determine the string in which the number of different characters minimum.
+       If there are several such string, find the first one._  
 * printLongestString
     * _Enter n strings. Find the longest string. Print the string and its length._
 * printShortestString
