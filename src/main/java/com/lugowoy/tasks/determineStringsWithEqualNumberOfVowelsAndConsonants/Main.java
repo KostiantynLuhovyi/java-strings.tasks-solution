@@ -11,19 +11,24 @@ import com.lugowoy.helper.other.ArrayLength;
 
 public class Main {
 
-    private static final int LENGTH_STRING = 10;
-
     public static void main(String[] args) {
 
         System.out.println("Enter length of the array : ");
         int lengthArray = ArrayLength.getLengthArray(new ReadingConsole());
 
-        Array<String> stringArray = FactoryArray.getFactoryArray(new CreatorArrayUnknown<String>()).create(
-                                                                     new FillingArrayRandomValueStrings("english").fill(lengthArray, LENGTH_STRING));
+        System.out.println("Enter length of all strings : ");
+        int lengthStrings = new ReadingConsole().readInt();
 
-        System.out.println("Strings in an array : " + stringArray);
+        if (lengthStrings % 2 == 0 ) {
+            Array<String> stringArray = FactoryArray.getFactoryArray(new CreatorArrayUnknown<String>()).create(
+                                                                         new FillingArrayRandomValueStrings("english").fill(lengthArray, lengthStrings));
+            System.out.println("Strings in an array : " + stringArray);
 
-        determineStringsWithEqualNumberOfVowelsAndConsonants(stringArray);
+            determineStringsWithEqualNumberOfVowelsAndConsonants(stringArray);
+        } else {
+            System.out.println("The entered strings length is not an even number " +
+                               "and therefore there can not be the same number of vowels and consonants.");
+        }
 
     }
 
