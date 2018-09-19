@@ -1,0 +1,1 @@
+Determine strings with an equal number of vowels and consonants.
