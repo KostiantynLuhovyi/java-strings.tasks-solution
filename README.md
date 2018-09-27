@@ -28,6 +28,9 @@ If you have any questions about this repository or the solution of the tasks in 
 * determineStringInWhichNumberOfDifferentSymbolsIsMinimum  
     * _Determine the string in which the number of different characters minimum.
        If there are several such string, find the first one._  
+* determineStringsInWhichCharactersGoInOrderOfIncreasingTheirCodes  
+    * _Define a string, the characters in which are in the strict order of increasing their codes.
+       If there are several such strings, find the first one._  
 * determineStringsWithEqualNumberOfVowelsAndConsonants  
     * _Determine strings with an equal number of vowels and consonants._  
 * printLongestString
