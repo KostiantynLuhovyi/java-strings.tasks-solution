@@ -28,6 +28,8 @@ If you have any questions about this repository or the solution of the tasks in 
        If there are several such lines, determine the first one._  
 * determineNumbersOfStringsContainingOnlyLatinCharacters  
     * _Determine the number of words containing only Latin characters._  
+* determinePalindromeString  
+    * _Determine a palindrome string. If there are more than one such lines, determine the second one._  
 * determineStringInWhichNumberOfDifferentSymbolsIsMinimum  
     * _Determine the string in which the number of different characters minimum.
        If there are several such string, find the first one._  
