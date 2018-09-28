@@ -23,6 +23,9 @@ If you have any questions about this repository or the solution of the tasks in 
 
 **The package name and description of the solved task that are contained in the root package com.lugowoy.tasks :**  
 
+* defineStringConsistingOnlyOfDifferentCharacters  
+    * _Define a string consisting only of different characters.
+       If there are several such lines, determine the first one._  
 * determineNumbersOfStringsContainingOnlyLatinCharacters  
     * _Determine the number of words containing only Latin characters._  
 * determineStringInWhichNumberOfDifferentSymbolsIsMinimum  
