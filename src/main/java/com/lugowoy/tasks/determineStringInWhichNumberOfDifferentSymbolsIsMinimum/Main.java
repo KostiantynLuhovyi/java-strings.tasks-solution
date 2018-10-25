@@ -1,11 +1,9 @@
 package com.lugowoy.tasks.determineStringInWhichNumberOfDifferentSymbolsIsMinimum;
 
-import com.lugowoy.helper.factory.FactoryArray;
-import com.lugowoy.helper.factory.creator.CreatorArrayUnknown;
 import com.lugowoy.helper.filling.array.strings.FillingArrayRandomValueStrings;
 import com.lugowoy.helper.io.reading.ReadingConsole;
-import com.lugowoy.helper.models.arrays.Array;
-import com.lugowoy.helper.other.ArrayLength;
+import com.lugowoy.helper.models.Array;
+import com.lugowoy.helper.other.LengthArray;
 
 /** Created by Konstantin Lugowoy on 14.09.2018. */
 
@@ -14,10 +12,9 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Enter length of the array : ");
-        int lengthArray = ArrayLength.getLengthArray(new ReadingConsole());
+        int lengthOfArray = LengthArray.getLengthOfArray(new ReadingConsole());
 
-        Array<String> stringArray = FactoryArray.getFactoryArray(new CreatorArrayUnknown<String>()).create(
-                                                                     new FillingArrayRandomValueStrings("english").fill(lengthArray));
+        Array<String> stringArray = Array.create(new FillingArrayRandomValueStrings("english").fill(lengthOfArray));
 
         System.out.println("Strings in an array : " + stringArray);
 

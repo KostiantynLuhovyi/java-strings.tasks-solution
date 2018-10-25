@@ -1,11 +1,9 @@
 package com.lugowoy.tasks.printStringsWhoseLengthIsLessThanAverage;
 
-import com.lugowoy.helper.factory.FactoryArray;
-import com.lugowoy.helper.factory.creator.CreatorArrayUnknown;
 import com.lugowoy.helper.filling.array.strings.FillingArrayRandomLengthValueStrings;
 import com.lugowoy.helper.io.reading.ReadingConsole;
-import com.lugowoy.helper.models.arrays.Array;
-import com.lugowoy.helper.other.ArrayLength;
+import com.lugowoy.helper.models.Array;
+import com.lugowoy.helper.other.LengthArray;
 
 /** Created by Konstantin Lugowoy on 20.08.2018. */
 
@@ -16,11 +14,9 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Enter length of the array : ");
-        int lengthArray = ArrayLength.getLengthArray(new ReadingConsole());
+        int lengthOfArray = LengthArray.getLengthOfArray(new ReadingConsole());
 
-        Array<String> stringArray = FactoryArray.getFactoryArray(new CreatorArrayUnknown<String>()).create(
-                                                                     new FillingArrayRandomLengthValueStrings("english").fill(lengthArray,
-                                                                                                                                      LENGTH_STRING));
+        Array<String> stringArray = Array.create(new FillingArrayRandomLengthValueStrings("english").fill(lengthOfArray, LENGTH_STRING));
 
         System.out.println("Strings in an array : " + stringArray);
 

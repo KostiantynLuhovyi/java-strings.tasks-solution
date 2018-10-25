@@ -1,6 +1,6 @@
 package com.lugowoy.tasks.printShortestString;
 
-import com.lugowoy.helper.models.arrays.Array;
+import com.lugowoy.helper.models.Array;
 
 /** Created by Konstantin Lugowoy on 26.07.2018. */
 
