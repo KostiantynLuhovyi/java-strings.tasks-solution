@@ -1,1 +1,0 @@
-Sort and print the strings in ascending order of their lengths.

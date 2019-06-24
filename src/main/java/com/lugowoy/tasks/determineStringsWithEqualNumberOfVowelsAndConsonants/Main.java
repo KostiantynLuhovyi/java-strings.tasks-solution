@@ -3,27 +3,31 @@ package com.lugowoy.tasks.determineStringsWithEqualNumberOfVowelsAndConsonants;
 import com.lugowoy.helper.filling.array.strings.FillingArrayRandomValueStrings;
 import com.lugowoy.helper.io.reading.ReadingConsole;
 import com.lugowoy.helper.models.Array;
-import com.lugowoy.helper.other.LengthArray;
+import com.lugowoy.helper.other.LengthReader;
 
-/** Created by Konstantin Lugowoy on 19.09.2018. */
+/**
+ * Determine strings with an equal number of vowels and consonants.
+ * <p>
+ * Created by LugowoyKonstantin on 19.09.2018.
+ */
 
 public class Main {
 
     public static void main(String[] args) {
 
         System.out.println("Enter length of the array : ");
-        int lengthOfArray = LengthArray.getLengthOfArray(new ReadingConsole());
+        int lengthOfArray = LengthReader.readLength(new ReadingConsole());
 
         System.out.println("Enter length of all strings : ");
         int lengthStrings = new ReadingConsole().readInt();
 
-        if (lengthStrings % 2 == 0 ) {
-            Array<String> stringArray = Array.create(new FillingArrayRandomValueStrings("english").fill(lengthOfArray, lengthStrings));
+        if (lengthStrings % 2 == 0) {
+            Array<String> stringArray = new Array<>(new FillingArrayRandomValueStrings("english").fill(lengthOfArray, lengthStrings));
             System.out.println("Strings in an array : " + stringArray);
             determineStringsWithEqualNumberOfVowelsAndConsonants(stringArray);
         } else {
             System.out.println("The entered strings length is not an even number " +
-                               "and therefore there can not be the same number of vowels and consonants.");
+                                            "and therefore there can not be the same number of vowels and consonants.");
         }
 
     }

@@ -1,1 +1,0 @@
-Determine the number of words containing only Latin characters.

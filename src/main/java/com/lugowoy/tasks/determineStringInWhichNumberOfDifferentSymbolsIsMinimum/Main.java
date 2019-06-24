@@ -3,18 +3,23 @@ package com.lugowoy.tasks.determineStringInWhichNumberOfDifferentSymbolsIsMinimu
 import com.lugowoy.helper.filling.array.strings.FillingArrayRandomValueStrings;
 import com.lugowoy.helper.io.reading.ReadingConsole;
 import com.lugowoy.helper.models.Array;
-import com.lugowoy.helper.other.LengthArray;
+import com.lugowoy.helper.other.LengthReader;
 
-/** Created by Konstantin Lugowoy on 14.09.2018. */
+/**
+ * Determine the string in which the number of different characters minimum.
+ * If there are several such string, find the first one.
+ * <p>
+ * Created by LugowoyKonstantin on 14.09.2018.
+ */
 
 public class Main {
 
     public static void main(String[] args) {
 
         System.out.println("Enter length of the array : ");
-        int lengthOfArray = LengthArray.getLengthOfArray(new ReadingConsole());
+        int lengthOfArray = LengthReader.readLength(new ReadingConsole());
 
-        Array<String> stringArray = Array.create(new FillingArrayRandomValueStrings("english").fill(lengthOfArray));
+        Array<String> stringArray = new Array<>(new FillingArrayRandomValueStrings("english").fill(lengthOfArray));
 
         System.out.println("Strings in an array : " + stringArray);
 

@@ -1,2 +1,0 @@
-Determine the string in which the number of different characters minimum.
-If there are several such string, find the first one.

@@ -3,19 +3,23 @@ package com.lugowoy.tasks.determinePalindromeString;
 import com.lugowoy.helper.filling.array.strings.FillingArrayReadingValueStrings;
 import com.lugowoy.helper.io.reading.ReadingConsole;
 import com.lugowoy.helper.models.Array;
-import com.lugowoy.helper.other.LengthArray;
+import com.lugowoy.helper.other.LengthReader;
 
-/** Created by Konstantin Lugowoy on 28.09.2018. */
+/**
+ * Determine a palindrome string. If there are more than one such lines, determine the second one.
+ * <p>
+ * Created by LugowoyKonstantin on 28.09.2018.
+ */
 
 public class Main {
 
     public static void main(String[] args) {
 
         System.out.println("Enter length of the array : ");
-        int lengthOfArray = LengthArray.getLengthOfArray(new ReadingConsole());
+        int lengthOfArray = LengthReader.readLength(new ReadingConsole());
 
         System.out.println("Enter strings : ");
-        Array<String> stringArray = Array.create(new FillingArrayReadingValueStrings(new ReadingConsole()).fill(lengthOfArray));
+        Array<String> stringArray = new Array<>(new FillingArrayReadingValueStrings(new ReadingConsole()).fill(lengthOfArray));
 
         System.out.println("Strings in an array : " + stringArray);
 
@@ -41,7 +45,7 @@ public class Main {
                 ++firstIndex;
                 --secondIndex;
             }
-            if ( ! resultString.equals("")) {
+            if (!resultString.equals("")) {
                 countResultString++;
                 if (countResultString == 2) {
                     break;

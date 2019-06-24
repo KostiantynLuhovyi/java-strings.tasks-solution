@@ -3,9 +3,13 @@ package com.lugowoy.tasks.printStringsInAscendingOrderOfLength;
 import com.lugowoy.helper.filling.array.strings.FillingArrayRandomLengthValueStrings;
 import com.lugowoy.helper.io.reading.ReadingConsole;
 import com.lugowoy.helper.models.Array;
-import com.lugowoy.helper.other.LengthArray;
+import com.lugowoy.helper.other.LengthReader;
 
-/** Created by Konstantin Lugowoy on 09.08.2018. */
+/**
+ * Sort and print the strings in ascending order of their lengths.
+ * <p>
+ * Created by LugowoyKonstantin on 09.08.2018.
+ */
 
 public class Main {
 
@@ -14,9 +18,9 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Enter length of the array : ");
-        int lengthOfArray = LengthArray.getLengthOfArray(new ReadingConsole());
+        int lengthOfArray = LengthReader.readLength(new ReadingConsole());
 
-        Array<String> stringsArray = Array.create(new FillingArrayRandomLengthValueStrings("english").fill(lengthOfArray, BOUND_STRINGS_LENGTH));
+        Array<String> stringsArray = new Array<>(new FillingArrayRandomLengthValueStrings("english").fill(lengthOfArray, BOUND_STRINGS_LENGTH));
 
         System.out.println("Strings in an array : " + stringsArray);
 

@@ -1,2 +1,0 @@
-Define a string consisting only of different characters.
-If there are several such lines, determine the first one.

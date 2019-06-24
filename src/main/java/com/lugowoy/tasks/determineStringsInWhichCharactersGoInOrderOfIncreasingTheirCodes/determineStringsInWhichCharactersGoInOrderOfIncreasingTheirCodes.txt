@@ -1,2 +1,0 @@
-Define a string, the characters in which are in the strict order of increasing their codes.
-If there are several such strings, find the first one.

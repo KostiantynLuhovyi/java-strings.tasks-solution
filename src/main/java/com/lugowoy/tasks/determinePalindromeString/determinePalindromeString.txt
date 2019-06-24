@@ -1,1 +1,0 @@
-Determine a palindrome string. If there are more than one such lines, determine the second one.

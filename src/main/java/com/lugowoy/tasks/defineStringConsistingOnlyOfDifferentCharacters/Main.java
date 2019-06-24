@@ -3,19 +3,26 @@ package com.lugowoy.tasks.defineStringConsistingOnlyOfDifferentCharacters;
 import com.lugowoy.helper.filling.array.strings.FillingArrayRandomValueStrings;
 import com.lugowoy.helper.io.reading.ReadingConsole;
 import com.lugowoy.helper.models.Array;
-import com.lugowoy.helper.other.CheckerArray;
-import com.lugowoy.helper.other.LengthArray;
+import com.lugowoy.helper.other.CheckerLengthArray;
+import com.lugowoy.helper.other.LengthReader;
 
-/** Created by Konstantin Lugowoy on 28.09.2018. */
+import java.util.Objects;
+
+/**
+ * Define a string consisting only of different characters.
+ * If there are several such lines, determine the first one.
+ * <p>
+ * Created by LugowoyKonstantin on 28.09.2018.
+ */
 
 public class Main {
 
     public static void main(String[] args) {
 
         System.out.println("Enter length of the array : ");
-        int lengthOfArray = LengthArray.getLengthOfArray(new ReadingConsole());
+        int lengthOfArray = LengthReader.readLength(new ReadingConsole());
 
-        Array<String> stringArray = Array.create(new FillingArrayRandomValueStrings("english").fill(lengthOfArray));
+        Array<String> stringArray = new Array<>(new FillingArrayRandomValueStrings("english").fill(lengthOfArray));
 
         System.out.println("Strings in an array : " + stringArray);
 
@@ -27,8 +34,7 @@ public class Main {
         String resultString = "";
         int counterDifferentChar = 0;
         char[] chars;
-        if (CheckerArray.checkArrayNonNull(stringArray)
-                && CheckerArray.checkLengthOfArrayIsGreaterZero(stringArray.getLength())) {
+        if (Objects.nonNull(stringArray) && CheckerLengthArray.checkLengthArray(stringArray)) {
             for (int i = 0; i < stringArray.getLength(); i++) {
                 String str = stringArray.get(i);
                 chars = str.toCharArray();

@@ -3,9 +3,14 @@ package com.lugowoy.tasks.determineStringsInWhichCharactersGoInOrderOfIncreasing
 import com.lugowoy.helper.filling.array.strings.FillingArrayRandomValueStrings;
 import com.lugowoy.helper.io.reading.ReadingConsole;
 import com.lugowoy.helper.models.Array;
-import com.lugowoy.helper.other.LengthArray;
+import com.lugowoy.helper.other.LengthReader;
 
-/** Created by Konstantin Lugowoy on 27.09.2018. */
+/**
+ * Define a string, the characters in which are in the strict order of increasing their codes.
+ * If there are several such strings, find the first one.
+ * <p>
+ * Created by LugowoyKonstantin on 27.09.2018.
+ */
 
 public class Main {
 
@@ -14,9 +19,9 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Enter length of the array : ");
-        int lengthOfArray = LengthArray.getLengthOfArray(new ReadingConsole());
+        int lengthOfArray = LengthReader.readLength(new ReadingConsole());
 
-        Array<String> stringArray = Array.create(new FillingArrayRandomValueStrings("english").fill(lengthOfArray, LENGTH_STRING));
+        Array<String> stringArray = new Array<>(new FillingArrayRandomValueStrings("english").fill(lengthOfArray, LENGTH_STRING));
 
         System.out.println("Strings in an array : " + stringArray);
 
@@ -41,7 +46,7 @@ public class Main {
                     break;
                 }
             }
-            if ( ! resultString.equals("")) {
+            if (!resultString.equals("")) {
                 System.out.println(resultString);
                 countNumberOfResult++;
             }
@@ -51,5 +56,5 @@ public class Main {
             System.out.println("No strings matching the condition.");
         }
     }
-    
+
 }
